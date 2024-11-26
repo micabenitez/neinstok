@@ -1,12 +1,8 @@
-import { Raleway, Rubik } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
-
-const raleway = Raleway ({
-  weight: '700',
-  subsets: ['latin'],
-})
+import Services from './components/Services';
 
 const rubik = Rubik ({
   weight: '500',
@@ -21,7 +17,7 @@ export default function Home() {
         <h1 className={`text-center text-white ${rubik.className} text-8xl font-bold tracking-wide`}>neinstok</h1>
       </div>
       <About />
-      
+      <Services />
       <Footer />
     </>
   );
