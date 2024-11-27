@@ -18,20 +18,27 @@ module.exports = {
         "zoom-in-down": {
             "0%": {
               opacity: 0,
-              transform: "scale3d(0.3, 0.3, 0.3) translate3d(0, -100%, 0)",
+              transform: "scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)",
             },
-            "80%": {
-              opacity: 0.8,
-              transform: "scale3d(1.1, 1.1, 1.1)",
-            },
-            "100%": {
+            "60%": {
               opacity: 1,
-              transform: "translate3d(0, 0%, 0)"
+              transform: "scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)",
             },
+          },
+          "fade-in-up": {
+              "0%": {
+                  opacity: 0,
+                  transform: "translate3d(0, 100%, 0)",
+              },
+              "100%": {
+                  opacity: 1,
+                  transform: "translate3d(0, 0, 0)",
+              },
           },
       },
       animation: {
-        zoomInDown: 'zoom-in-down 1s ease-in-out 0.10s 1',
+        zoomInDown: 'zoom-in-down 1s ease-in 0.10s 1',
+        fadeinup: 'fade-in-up 1s ease-in-out 0.25s 1',
       },
     },
   },
