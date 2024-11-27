@@ -12,7 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        raleway: ['var(--font-raleway)'],
+        raleway: ["Raleway", "sans-serif"],
       },
       keyframes: {
         "zoom-in-down": {
