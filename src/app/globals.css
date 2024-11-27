@@ -29,7 +29,7 @@ body {
     right: 0;
     width: 23rem;
     height: 39em;
-    margin-top: -4rem;
+    margin-top: -5rem;
     margin-right: 13rem;
     background-image: url("./about.webp");
     background-size: cover;
@@ -41,6 +41,5 @@ body {
 
   li:hover {
     color: #ff0000;
-    
   }
 }
