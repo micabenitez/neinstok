@@ -8,7 +8,7 @@ export default function Services() {
     return (
         <>
             <section className={`bg-[#181918] h-[38rem] p-10 flex flex-col gap-10`}>
-                <div className="flex justify-evenly mt-24 items-center">
+                <div className="flex flex-wrap justify-evenly mt-24 items-center">
                     <Card color="white" text="Producción" textColor="black" srcImg={prodImg} />
                     <Card color="[#ff0000]" text="Posproducción" textColor="white" srcImg={posImg} />
                     <Card color="white" text="Adicionales" textColor="black" srcImg={adicionalesImg} />
