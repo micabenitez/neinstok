@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className='flex flex-col justify-center p-5 m-9 h-[20rem] mb-5'>
-        <h1 className={`text-center text-white ${rubik.className} text-8xl font-bold tracking-wide animate-fadeinup`}>neinstok</h1>
+      <div className='flex h-64 md:h-[21rem] md:items-center justify-center'>
+        <h1 className={`self-center text-center text-white ${rubik.className} text-6xl font-bold tracking-wide md:text-8xl md:mt-14 animate-fadeinup`}>neinstok</h1>
       </div>
       <About />
       <Services />
