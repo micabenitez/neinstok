@@ -4,7 +4,7 @@ export default function About() {
     return (
         <>
             <section className="bg-white h-96 text-black md:relative md:h-[28rem] md:mt-48">
-                <div className="h-full flex flex-col items-center justify-evenly p-9 md:w-2/5 md:ml-28 md:p-12 md:items-start">
+                <div className="h-full flex flex-col gap-4 items-center justify-around p-9 md:w-2/5 md:ml-28 md:p-12 md:items-start">
                     <h2 className="font-semibold text-xl">¿Quiénes somos?</h2>
                     <p className={`text-center tracking-wide md:text-justify`}>
                         Somos un equipo dedicado a crear música de alta calidad. Nuestra meta es ayudar a artistas y proyectos a alcanzar su máximo potencial a través de servicios de producción, mezcla y mastering de instrumentales.
