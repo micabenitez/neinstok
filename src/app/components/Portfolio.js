@@ -18,7 +18,7 @@ export default function Portfolio() {
                 </div>
             </div>
 
-            <div className="absolute w-full h-[40rem] flex items-center  ">
+            <div className="hidden md:absolute md:w-full md:h-[40rem] md:flex md:items-center">
                 <Gallery />
                 {/* <div className="relative flex w-full bg-black -z-0 animate-loopScroll "> 
                     <div key={3} className="bg-orange-400 w-[40rem] h-[35rem] top-0 triangle absolute"></div>
