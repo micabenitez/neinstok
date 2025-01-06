@@ -45,7 +45,11 @@ body {
     clip-path: polygon(56% 0, 56% 25%, 100% 25%, 100% 100%, 45% 100%, 45% 73%, 0 73%, 0 0);
   }
 
-  li:hover {
-    color: #ff0000;
+  .triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .triangle-reverse {
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
   }
 }

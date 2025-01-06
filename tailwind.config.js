@@ -35,10 +35,14 @@ module.exports = {
                   transform: "translate3d(0, 0, 0)",
               },
           },
+          "loop-scroll": {
+            "to": { transform: "translateX(calc(-100% - 40px))"},
+          },
       },
       animation: {
         zoomInDown: 'zoom-in-down 1s ease-in 0.10s 1',
         fadeinup: 'fade-in-up 1s ease-in-out 0.25s 1',
+        loopScroll: 'loop-scroll 40s linear infinite',
       },
     },
   },

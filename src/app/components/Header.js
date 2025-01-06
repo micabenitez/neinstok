@@ -11,10 +11,10 @@ export default function Header() {
                     <Image className="md:hidden" src={menu} width={30} height={30} alt="menu"/>
                 </div>
                 <ul className="hidden md:flex gap-5 p-4 text-base tracking-widest text-black mr-4">
-                    <li><Link href="">Servicios</Link></li>
-                    <li><Link href="#portfolio">Portafolio</Link></li>
-                    <li><Link href="">Acerca de</Link></li>
-                    <li><Link href="">Contacto</Link></li>
+                    <li className="hover:text-[#ff0000]"><Link href="">Servicios</Link></li>
+                    <li className="hover:text-[#ff0000]"><Link href="#portfolio">Portafolio</Link></li>
+                    <li className="hover:text-[#ff0000]"><Link href="">Acerca de</Link></li>
+                    <li className="hover:text-[#ff0000]"><Link href="">Contacto</Link></li>
                 </ul>
             </nav>
         </header>
