@@ -10,7 +10,7 @@ const textAdic = ["Producción de jingles", "Asesoramiento técnico para locutor
 export default function Services() {
     return (
         <>
-            <section className={`bg-[#181918] h-full px-6 py-10 sm:p-10 md:h-[38rem]`}>
+            <section id="services" className={`bg-[#181918] h-full px-6 py-10 sm:p-10 md:h-[38rem]`}>
                 <div className="flex gap-6 flex-wrap items-center justify-center h-full md:justify-evenly ">
                     <Card color="white" text="Producción" textColor="black" srcImg={prodImg} services={textProd}/>
                     <Card color="[#ff0000]" text="Posproducción" textColor="white" srcImg={posImg} services={textPosProd}/>

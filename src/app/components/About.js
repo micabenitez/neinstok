@@ -3,7 +3,7 @@ import { Raleway } from "next/font/google";
 export default function About() {
     return (
         <>
-            <section className="bg-white h-96 text-black md:relative md:h-[28rem] md:mt-48">
+            <section id="about" className="bg-white h-96 text-black md:relative md:h-[28rem] md:mt-48">
                 <div className="h-full flex flex-col items-center justify-around p-5 sm:p-9 md:w-2/5 md:ml-28 md:p-12 md:items-start">
                     <h2 className="font-semibold text-xl">¿Quiénes somos?</h2>
                     <p className={`text-center tracking-wide md:text-justify`}>

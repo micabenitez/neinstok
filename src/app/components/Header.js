@@ -2,6 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import menu from "/public/menu.svg"
 
+const handleMenu = () => {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("hidden");
+}
 export default function Header() {
     return (
         <header>
@@ -11,10 +15,10 @@ export default function Header() {
                     <Image className="md:hidden" src={menu} width={30} height={30} alt="menu"/>
                 </div>
                 <ul className="hidden md:flex gap-5 p-4 text-base tracking-widest text-black mr-4">
-                    <li className="hover:text-[#ff0000]"><Link href="">Servicios</Link></li>
+                    <li className="hover:text-[#ff0000]"><Link href="#services">Servicios</Link></li>
                     <li className="hover:text-[#ff0000]"><Link href="#portfolio">Portafolio</Link></li>
-                    <li className="hover:text-[#ff0000]"><Link href="">Acerca de</Link></li>
-                    <li className="hover:text-[#ff0000]"><Link href="">Contacto</Link></li>
+                    <li className="hover:text-[#ff0000]"><Link href="#about">Acerca de</Link></li>
+                    <li className="hover:text-[#ff0000]"><Link href="#contacto">Contacto</Link></li>
                 </ul>
             </nav>
         </header>

@@ -38,3 +38,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/public/music
+/public/portadas
+src/app/components/PlayerV0.js
+src/app/components/Player.js
+src/app/components/SongCard.js
+src/app/portfolio

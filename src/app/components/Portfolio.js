@@ -1,4 +1,5 @@
 import Gallery from "./Gallery";
+import Right from "./Right";
 
 export default function Portfolio() {
     return (
@@ -18,22 +19,10 @@ export default function Portfolio() {
                 </div>
             </div>
 
-            <div className="hidden md:absolute md:w-full md:h-[40rem] md:flex md:items-center">
+            <div className="hidden md:absolute md:w-full md:h-[44rem] md:flex md:flex-col md:justify-around md:py-10">
                 <Gallery />
-                {/* <div className="relative flex w-full bg-black -z-0 animate-loopScroll "> 
-                    <div key={3} className="bg-orange-400 w-[40rem] h-[35rem] top-0 triangle absolute"></div>
-                    <div key={1} className="bg-red-500 w-[40rem] h-[35rem] left-[21rem] triangle-reverse absolute"></div>
-                    <div key={2} className="bg-orange-400 w-[40rem] h-[35rem] left-[42rem] triangle absolute"></div>
-                    <div key={6} className="bg-red-500 w-[40rem] h-[35rem] -left-[21rem] triangle-reverse absolute"></div>
-                    <div key={4} className="bg-orange-400 w-[40rem] h-[35rem] -left-[42rem] triangle absolute"></div>
-                </div>
-                <div className="relative flex w-full bg-black -z-0 animate-loopScroll">
-                    <div key={8} className="bg-red-500 w-[40rem] h-[35rem] left-[24rem] triangle-reverse absolute"></div>
-                    <div key={7} className="bg-orange-400 w-[40rem] h-[35rem] left-[84rem] top-0 triangle absolute"></div>
-                    <div key={10} className="bg-red-500 w-[40rem] h-[35rem] left-[105rem] triangle-reverse absolute"></div>
-                    <div key={9} className="bg-orange-400 w-[40rem] h-[35rem] left-[126rem] triangle absolute"></div>
-                    <div key={11} className="bg-red-500 w-[40rem] h-[35rem] left-[147rem] triangle-reverse absolute"></div>
-                </div> */}
+                <Right />
+                <Gallery />
             </div>
         </section>
     )
