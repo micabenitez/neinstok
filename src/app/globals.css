@@ -12,6 +12,7 @@
   --font-rubik: var(--font-rubik);
   --font-rubikOne: var(--font-rubikOne);
   --font-poppins: var(--font-poppins);
+  --font-rubikOne: 'Rubik One', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

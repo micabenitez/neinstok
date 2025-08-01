@@ -39,7 +39,7 @@ function Hero() {
                     Tu sonido, único. El proceso, simple.
                 </p>
                 <button 
-                    className="bg-red-500 px-8 py-2 text-md font-bold rounded-lg 
+                    className="bg-[#ff0000] px-8 py-2 text-md font-bold rounded-lg 
                              hover:bg-red-600 transition-colors duration-300"
                     aria-label="Ver más información"
                 >

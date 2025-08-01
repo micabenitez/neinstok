@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/rubik-one':
+        specifier: ^5.2.5
+        version: 5.2.5
       next:
         specifier: 15.4.4
         version: 15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -31,7 +34,7 @@ importers:
         specifier: 15.4.4
         version: 15.4.4(eslint@9.32.0(jiti@2.5.1))(typescript@5.8.3)
       tailwindcss:
-        specifier: ^4
+        specifier: ^4.1.11
         version: 4.1.11
 
 packages:
@@ -90,6 +93,9 @@ packages:
   '@eslint/plugin-kit@0.3.4':
     resolution: {integrity: sha512-Ul5l+lHEcw3L5+k8POx6r74mxEYKG5kOb6Xpy2gCRW6zweT6TEhAf8vhxGgjhqrd/VO/Dirhsb+1hNpD1ue9hw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/rubik-one@5.2.5':
+    resolution: {integrity: sha512-NGnSpWvOzMZ3ahj77b9dAA6FieSVkefaeqSSKrlaMWSiiKw17qK7eWR6LUBJKA4whxMEn5DCqCYhCQ/aXvjViQ==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1836,6 +1842,8 @@ snapshots:
     dependencies:
       '@eslint/core': 0.15.1
       levn: 0.4.1
+
+  '@fontsource/rubik-one@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 

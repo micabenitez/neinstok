@@ -1,13 +1,13 @@
 import Link from "next/link";
-import Card from "./Card";
 import PortfolioCard from "./PortfolioCard";
+import '@fontsource/rubik-one';
 
 
 function Portfolio({ ref }) {
     return ( 
-        <section ref={ref} className="min-h-screen px-4 md:px-16 py-12 text-white text-center">
+        <section ref={ref} className="min-h-screen px-4 md:px-16 py-20 text-white text-center">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold mb-4 tracking-wide">Portafolio</h1>
+                <h1 className="text-5xl mb-4 font-rubikOne tracking-widest">Portafolio</h1>
                 <p className="mt-5 text-lg text-gray-300">
                     Explora mis proyectos de producción musical y diseño sonoro
                 </p>
@@ -25,7 +25,7 @@ function Portfolio({ ref }) {
                 </div>
                 <Link 
                     href="#" 
-                    className="inline-block uppercase bg-red-600 hover:bg-red-700 transition-colors duration-300 px-11 py-2 mt-16 rounded-md font-semibold"
+                    className="inline-block uppercase bg-[#ff0000] hover:bg-red-700 transition-colors duration-300 px-11 py-2 mt-16 rounded-md font-semibold"
                 >
                     Ver mis trabajos
                 </Link>
