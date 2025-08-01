@@ -1,15 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { raleway } from "./fonts";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "neinstok",
@@ -19,9 +9,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={raleway.variable}>
       <body
-        className="bg-gradient-to-b from-[#111317] via-[#1d2128] to-[#111317] min-h-screen"
+        className={`bg-[#111317] min-h-screen font-raleway`}
       >
         {children}
       </body>

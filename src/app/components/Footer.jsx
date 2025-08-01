@@ -1,7 +1,7 @@
 function Footer() {
     return ( 
         <footer className="text-white px-10 py-6">
-            <div className="flex justify-between p-6">
+            <div className="flex-col md:flex-row md:justify-between p-6">
                 
                 <div className="flex justify-center items-center">
                     <svg width={64} height={64} className="">
@@ -11,12 +11,13 @@ function Footer() {
                    <svg width={56} height={56} className="">
                             <use href="/assets/sprite.svg#line" />
                     </svg>
-                    <p className="text-left w-56 text-balance">Tu música es importante. La tratamos con el respeto y la calidad que merece.</p>
+                    <p className="text-left max-w-48 text-balance">Tu música es importante. La tratamos con el respeto y la calidad que merece.</p>
                 </div>
-                
-                <div className="flex flex-col items-start gap-2">
-                    <div className="flex flex-col items-start ">
-                        <p>Contacto</p>
+
+                {/* Redes y contacto */}
+                <div className="flex flex-col items-start gap-3">
+                    <div className="flex flex-col items-start mt-6">
+                        <p className="font-bold">Contacto</p>
                         <p className="text-lg">neinstok@gmail.com</p>
                     </div>
 
@@ -41,7 +42,7 @@ function Footer() {
 
             </div>
 
-            <div className="flex justify-between p-6 items-center mt-4">
+            <div className="flex flex-col md:flex-row md:justify-between p-6 items-start md:items-center md:mt-4">
                 <p>Developed by neinstok</p>
                 <p className="">© 2025 neinstok - Todos los derechos reservados </p>
                 <p>Términos y condiciones</p>
