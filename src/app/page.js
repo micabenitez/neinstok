@@ -1,5 +1,4 @@
 'use client'
-import Footer from "./components/Footer";
 import About from "./components/About";
 import Services from "./components/Services";
 import Header from "./components/Header";
@@ -44,7 +43,6 @@ export default function Home() {
         <About ref={sections.about}/>
         <Portfolio ref={sections.portfolio} />
         <Services ref={sections.services}/>
-        <Footer />
       </div>
     </>
   );

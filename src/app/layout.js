@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import { raleway } from "./fonts";
 import "./globals.css";
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         className={`bg-gradient-to-b from-[#111317] via-[#1d2128] to-[#111317] min-h-screen font-raleway`}
       >
         {children}
+      <Footer />
       </body>
     </html>
   );
