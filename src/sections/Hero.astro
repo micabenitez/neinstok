@@ -1,0 +1,24 @@
+---
+import HeroLogo from "@/components/HeroLogo.astro";
+import '@fontsource-variable/inter';
+---
+<section class="flex items-start justify-between min-h-screen -mx-10 px-20 overflow-hidden relative">
+    
+    <div class="flex flex-col  flex-1 max-w-lg mt-32">
+        <h1 class="font-bold text-4xl mb-2">Tu sonido, único.</h1>
+        <h2 class="font-bold text-4xl mb-8">El proceso, simple.</h2>
+        <p class="text-md font-medium mb-6 text-primary">neinstok - Productor e Ingeniero de Mezcla y Mastering</p>
+        <button class="bg-secondary hover:bg-red-700 uppercase font-extrabold text-white rounded-xl py-2 px-12 w-fit">VER PROYECTOS</button>
+    </div>
+
+    <div class="absolute -top-6 left-72">
+        <HeroLogo class="text-secondary"/>
+    </div>
+
+</section>
+
+<style>
+    h4, button {
+        font-family: 'Inter Variable', sans-serif;
+    }
+</style>
