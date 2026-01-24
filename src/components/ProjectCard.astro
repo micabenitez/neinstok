@@ -1,0 +1,32 @@
+---
+import PlayLogo from './PlayLogo.astro';
+
+// src/components/ProjectCard.astro
+interface Props {
+    title: string;
+    image: string;
+    bgColor: string;
+    large?: boolean;
+}
+
+const { title, image, bgColor, large = false } = Astro.props;
+---
+ 
+<div class={large ? "col-span-1 row-span-2" : ""}>
+    <div class={`relative ${large ? 'w-80 h-full' : 'w-80 h-80'} ${bgColor} rounded-3xl overflow-hidden group cursor-pointer flex items-end`}>
+        <img 
+            src={image} 
+            alt={title} 
+            loading="lazy"
+            class="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-75 transition duration-500 ease-in-out"
+        />
+            
+        <div class={`absolute top-5 left-5 z-20 ${large ? 'w-10 h-10' : 'w-10 h-10'} rounded-full`}>
+           <PlayLogo />    
+        </div>
+        
+        <div class="relative z-10 text-white font-bold tracking-wide text-lg pb-6 pl-8">
+            {title}
+        </div>
+    </div>
+</div>

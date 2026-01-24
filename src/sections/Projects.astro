@@ -1,108 +1,45 @@
-<section class="py-20 -mx-10 px-10">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-lg font-bold mb-16 tracking-widest">_PROYECTOS</h2>
+---
+import ProjectCard from "@/components/ProjectCard.astro";
+---
 
-        <div class="grid grid-cols-3 gap-6 mb-12">
-            {/* Tarjeta grande - Artist */}
-            <div class="col-span-1 row-span-2">
-                <div class="relative h-96 bg-black rounded-3xl overflow-hidden group cursor-pointer">
-                    <img 
-                        src="/project-artist.jpg" 
-                        alt="Artist" 
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-300"
-                    />
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <div class="absolute bottom-4 left-4 text-white font-bold">Artist</div>
-                </div>
-            </div>
-
-            {/* Tarjeta - PopRadio */}
-            <div class="col-span-1">
-                <div class="relative h-32 bg-red-600 rounded-3xl overflow-hidden group cursor-pointer flex items-end">
-                    <img 
-                        src="/project-popradio.jpg" 
-                        alt="PopRadio" 
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition"
-                    />
-                    <div class="absolute top-4 right-4 z-10 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="8" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="relative z-10 text-white font-bold text-sm pb-3 pl-4">PopRadio</div>
-                </div>
-            </div>
-
-            {/* Tarjeta - Rock Metal */}
-            <div class="col-span-1">
-                
-                <div class="relative h-32 bg-gray-500 rounded-3xl overflow-hidden group cursor-pointer flex items-end">
-                    <img 
-                        src="/project-rockmetal.jpg" 
-                        alt="Rock Metal" 
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition"
-                    />
-                    <div class="absolute top-4 right-4 z-10 w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="8" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="relative z-10 text-white font-bold text-sm pb-3 pl-4">Rock Metal</div>
-                </div>
-            </div>
-
-            {/* Tarjeta - Urbano */}
-            <div class="col-span-1">
-                <div class="relative h-32 bg-orange-600 rounded-3xl overflow-hidden group cursor-pointer flex items-end">
-                    <img 
-                        src="/project-urbano.jpg" 
-                        alt="Urbano" 
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition"
-                    />
-                    <div class="absolute top-4 right-4 z-10 w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="8" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="relative z-10 text-white font-bold text-sm pb-3 pl-4">Urbano</div>
-                </div>
-            </div>
-
-            {/* Tarjeta - Podcast */}
-            <div class="col-span-1">
-                <div class="relative h-32 bg-black rounded-3xl overflow-hidden group cursor-pointer flex items-end">
-                    <img 
-                        src="/project-podcast.jpg" 
-                        alt="Podcast" 
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition"
-                    />
-                    <div class="absolute top-4 right-4 z-10 w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="8" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="relative z-10 text-white font-bold text-sm pb-3 pl-4">Podcast</div>
-                </div>
-            </div>
-        </div>
-
-        {/* CTA Section */}
-        <div class="text-center">
-            <p class="text-gray-600 mb-2">
-                ¿Te gustó lo que escuchaste? 
-                <a href="#contact" class="text-secondary font-bold hover:underline">Contáctame</a>
-            </p>
-        </div>
+<section class="py-10 -mx-10 px-20">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-lg font-bold mb-16 tracking-widest">_PROYECTOS</h2>
+    
+    <div class="grid grid-cols-3 gap-y-8 mb-12 px-16">
+      <ProjectCard 
+        title="Artist" 
+        image="/img/skl.webp" 
+        bgColor="bg-black" 
+        large={true}
+      />
+      <ProjectCard 
+        title="Pop/Radio" 
+        image="/img/pop-indie.webp" 
+        bgColor="bg-red-600" 
+      />
+      <ProjectCard 
+        title="Rock/Metal" 
+        image="/img/rock-metal.webp" 
+        bgColor="bg-gray-500" 
+      />
+      <ProjectCard 
+        title="Urbano" 
+        image="/img/urbano.webp" 
+        bgColor="bg-orange-600" 
+      />
+      <ProjectCard 
+        title="Podcast" 
+        image="/img/podcast.webp" 
+        bgColor="bg-black" 
+      />
     </div>
+
+    <div class="text-center">
+      <p class="text-gray-600 mb-2">
+        ¿Te gustó lo que escuchaste?
+        <a href="#contact" class="text-secondary font-bold hover:underline">Contáctame</a>
+      </p>
+    </div>
+  </div>
 </section>
