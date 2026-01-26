@@ -1,0 +1,88 @@
+---
+const inputStyles = "w-full px-4 md:px-6 py-3 md:py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all duration-300 text-gray-800 placeholder-gray-400";
+const labelStyles = "block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide";
+---
+
+<section class="py-16 md:py-8 w-full px-4 sm:px-6 lg:px-12 mb-18" id="contact">
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-12 md:mb-16">
+            <h2 class="text-sm md:text-base font-bold mb-4 text-center md:text-left">
+                _CONTACTO
+            </h2>
+            <h3 class="text-3xl md:text-4xl lg:text-3xl font-medium leading-tight text-gray-900 text-center my-8">
+                Lleva tu sonido al siguiente nivel. <span class="text-secondary">Escríbeme.</span>
+            </h3>
+        </div>
+      
+        <form 
+            class="space-y-6 md:space-y-8 mx-auto max-w-3xl" 
+            action="" 
+            method="POST"
+        >
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div>
+                    <label for="name" class={labelStyles}>Nombre</label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Tu nombre completo"
+                        required
+                        autocomplete="name"
+                        class={inputStyles}
+                    />
+                </div>
+
+                <div>
+                    <label for="email" class={labelStyles}>Email</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="tu@email.com"
+                        required
+                        autocomplete="email"
+                        class={inputStyles}
+                    />
+                </div>
+            </div>
+
+            <div>
+                <label for="message" class={labelStyles}>Tu Mensaje</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Detalles sobre tu demo, referencias o preguntas..."
+                    required
+                    class={`${inputStyles} resize-y min-h-30]`}
+                ></textarea>
+            </div>
+
+            <div class="flex ">
+                <input
+                    id="terms"
+                    type="checkbox"
+                    name="terms"
+                    required
+                    class="w-5 h-5 ml-1 cursor-pointer"
+                >
+                <div class="ml-3 text-sm">
+                    <label for="terms" class="font-medium text-gray-700 cursor-pointer select-none">
+                        He leído y acepto los <a href="#" class="text-secondary hover:underline"> términos y condiciones</a>.
+                    </label>
+                </div>                
+            </div>
+
+            <button
+                type="submit"
+                class="w-full md:w-full bg-secondary hover:bg-red-700 text-white font-extrabold uppercase tracking-widest 
+                       py-4 px-12 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 
+                       transition-all duration-300 text-sm md:text-base"
+            >
+                Enviar Solicitud
+            </button>
+        </form>
+    </div>
+</section>
