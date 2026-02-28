@@ -1,19 +1,19 @@
 ---
-import HeroLogo from "@/components/HeroLogo.astro";
-import SpotifyLogo from "@/components/SpotifyLogo.astro";
-import InstagramLogo from "@/components/InstagramLogo.astro";
-import YoutubeLogo from "@/components/YoutubeLogo.astro";
-import TiktokLogo from "@/components/TiktokLogo.astro";
-import SoundcloudLogo from "@/components/SoundcloudLogo.astro";
+import HeroLogo from "@/components/logos/HeroLogo.astro";
+import SpotifyLogo from "@/components/logos/SpotifyLogo.astro";
+import InstagramLogo from "@/components/logos/InstagramLogo.astro";
+import YoutubeLogo from "@/components/logos/YoutubeLogo.astro";
+import TiktokLogo from "@/components/logos/TiktokLogo.astro";
+import SoundcloudLogo from "@/components/logos/SoundcloudLogo.astro";
 ---
 
-<footer class="bg-primary w-full min-h-80 px-10 py-10 md:py-10 relative">
-  <div class="max-w-7xl mx-auto px-16 pt-10">
+<footer class="bg-primary w-full min-h-80 p-8 md:px-10 md:py-10 relative">
+  <div class="max-w-7xl mx-auto sm:px-0 lg:px-16 lg:pt-10">
     
-    <div class="flex justify-between mb-20 items-center">
+    <div class="flex justify-between mb-8 md:mb-20 items-center flex-wrap gap-10">
       <div class="flex gap-7 items-center">
           <HeroLogo class="w-20 h-20 text-white" />
-        <div class="w-1 rounded-2xl h-24 bg-white hidden sm:block"></div>
+        <div class="w-1 rounded-2xl h-16 md:h-24 bg-white"></div>
         <p class="text-sm md:text-justify md:text-lg text-white max-w-xl">
           Tu música es importante. <br>La tratamos con el respeto y la calidad que
           merece.
@@ -31,8 +31,8 @@ import SoundcloudLogo from "@/components/SoundcloudLogo.astro";
             </a>
           </div>
           <div>
-            <h3 class="font-bold text-lg mb-3 tracking-wide">Sígueme</h3>
-            <div class="flex justify-between">
+            <h3 class="font-bold text-lg mb-1 md:mb-3 tracking-wide">Sígueme</h3>
+            <div class="flex justify-between py-1">
                 <a
                 href="https://www.facebook.com/neinstok"
                 target="_blank"
@@ -74,7 +74,7 @@ import SoundcloudLogo from "@/components/SoundcloudLogo.astro";
       </div>
     </div>
 
-    <div class="flex justify-between mt-10 border-t-2 py-5 text-gray-200 border-gray-700">
+    <div class="flex flex-wrap gap-4 justify-between md:mt-10 border-t-2 py-5 text-gray-200 border-gray-700">
       <p>Developed by <span class="font-semibold">neinstok</span> </p>
       <p class="col-span-1 sm:col-span-2 lg:col-span-1 order-3 sm:order-2 lg:order-2">
         © 2026 - Todos los derechos reservados

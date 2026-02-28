@@ -1,45 +1,100 @@
 ---
 import ProjectCard from "@/components/ProjectCard.astro";
+import { ProjectPlayer } from "@/components/ProjectPlayer";
+import { projectsData } from "@/data/projects";
 ---
 
-<section class="py-10">
+<section class="py-10" id="projects">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-lg font-bold mb-16 tracking-widest">_PROYECTOS</h2>
-    
-    <div class="grid grid-cols-3 gap-y-8 mb-12 px-16">
-      <ProjectCard 
-        title="Artist" 
-        image="/img/skl.webp" 
-        bgColor="bg-black" 
-        large={true}
-      />
-      <ProjectCard 
-        title="Pop/Radio" 
-        image="/img/pop-indie.webp" 
-        bgColor="bg-red-600" 
-      />
-      <ProjectCard 
-        title="Rock/Metal" 
-        image="/img/rock-metal.webp" 
-        bgColor="bg-gray-500" 
-      />
-      <ProjectCard 
-        title="Urbano" 
-        image="/img/urbano.webp" 
-        bgColor="bg-orange-600" 
-      />
-      <ProjectCard 
-        title="Podcast" 
-        image="/img/podcast.webp" 
-        bgColor="bg-black" 
-      />
+    <h2
+      class="text-lg font-bold mb-6 md:mb-16 tracking-widest px-4 sm:px-6 md:px-8 lg:px-16"
+    >
+      _PROYECTOS
+    </h2>
+
+    <div
+      class="flex overflow-x-auto snap-x snap-mandatory gap-4 px-4 pb-6  custom-scrollbar
+      md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:gap-y-4 md:px-16 "
+    >
+      {
+        projectsData.map(({ title, image, audio, large }) => (
+          <div class="snap-center shrink-0 w-80 sm:w-87.5 md:w-auto">
+            <ProjectCard
+              title={title}
+              image={image}
+              audio={audio}
+              large={large}
+            />
+          </div>
+        ))
+      }
     </div>
 
-    <div class="text-center">
-      <p class="text-gray-600 mb-2">
+    <ProjectPlayer client:idle />
+
+    <div class="text-center px-4">
+      <p class="text-gray-600 mt-4">
         ¿Te gustó lo que escuchaste?
-        <a href="#contact" class="text-secondary font-bold hover:underline">Contáctame</a>
+        <a href="#contact" class="text-secondary font-bold hover:underline"
+          >Contáctame</a
+        >
       </p>
     </div>
   </div>
 </section>
+
+<style>
+  .custom-scrollbar {  
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+</style>
+
+<script>
+  const carouselContainer = document.getElementById("carousel-container");
+  const carouselPrev = document.getElementById("carousel-prev");
+  const carouselNext = document.getElementById("carousel-next");
+
+  if (carouselContainer && carouselPrev && carouselNext) {
+    const scrollAmount = 320;
+
+    carouselNext.addEventListener("click", () => {
+      carouselContainer.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    });
+
+    carouselPrev.addEventListener("click", () => {
+      carouselContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+      });
+    });
+
+    carouselContainer.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      carouselContainer.scrollBy({
+        left: e.deltaY > 0 ? scrollAmount : -scrollAmount,
+        behavior: "smooth",
+      });
+    });
+  }
+</script>

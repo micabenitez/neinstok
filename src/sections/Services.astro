@@ -1,7 +1,7 @@
 ---
-import Production from "@/components/Production.astro";
-import Mixing from "@/components/Mixing.astro";
-import Mastering from "@/components/Mastering.astro";
+import Production from "@/components/icons/Production.astro";
+import Mixing from "@/components/icons/Mixing.astro";
+import Mastering from "@/components/icons/Mastering.astro";
 
 const services = [
   {
@@ -25,46 +25,48 @@ const services = [
 ];
 ---
 
-<section class="py-18 bg-white sm:px-6 lg:px-8 mb-12" id="services">
+<section class="py-10 md:py-18 bg-white sm:px-6 lg:px-8" id="services">
     <div class="max-w-6xl mx-auto">
-        <div class="mb-12 md:mb-16">
-            <h2 class="text-sm md:text-lg font-bold mb-10 md:mb-8 tracking-widest text-gray-500 md:text-gray-900 text-left">
+        <div class="md:mb-16">
+            <h2 class="mx-5 text-sm md:text-lg font-bold mb-10 md:mb-8 tracking-widest text-gray-500 md:text-gray-900 text-left">
                 _SERVICIOS
             </h2>
-            <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
+            <h3 class="text-lg md:text-3xl lg:text-4xl font-bold text-center leading-tight">
                 Tu sonido, único. El proceso, simple.
             </h3>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12 md:mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 md:mb-16 p-8">
             {services.map(({ title, Icon, color, description }) => (
                 <article class="group relative flex flex-col items-start justify-between bg-gray-100 rounded-3xl 
-                    p-6 md:p-8 min-h-72 w-full transition-all duration-300 ease-out
-                    hover:shadow-xl hover:-translate-y-2 focus-within:ring-2 focus-within:ring-primary cursor-pointer"
-                >
-                    <div class="group-hover:scale-110 transition-transform duration-300 origin-left">
-                        <Icon class="group-hover:opacity-60 transition-opacity duration-300" /> 
-                    </div> 
+                p-6 md:p-8 min-h-72 w-full transition-all duration-300 ease-out
+                md:hover:shadow-xl md:hover:-translate-y-2 
+                focus-within:ring-2 focus-within:ring-primary cursor-pointer"
+            >
+                <div class="md:group-hover:scale-110 transition-transform duration-300 origin-left">
+                    <Icon class="md:group-hover:opacity-60 transition-opacity duration-300" /> 
+                </div> 
+                
+                <div class="w-full">
+                    <h4 class="text-xl font-bold mb-2 tracking-wider text-gray-800 transition-colors duration-300">{title}</h4>
                     
-                    <div class="w-full">
-                        <h4 class="text-xl font-bold mb-2 tracking-wider text-gray-800 transition-colors duration-300">{title}</h4>
-                        <p class="text-gray-600 mb-4 transition-colors duration-300 text-sm font-semibold leading-relaxed hidden group-hover:block">
-                            {description}
-                        </p>
-                        <div class={`w-8 h-1.5 ${color} rounded-full transition-all duration-300 group-hover:w-12`}></div>                    
-                    </div>
-                </article>
+                    <p class="text-gray-600 mb-4 transition-colors duration-300 text-sm font-semibold leading-relaxed 
+                              block md:hidden md:group-hover:block">
+                        {description}
+                    </p>
+                    
+                    <div class={`w-8 h-1.5 ${color} rounded-full transition-all duration-300 md:group-hover:w-12`}></div>                    
+                </div>
+            </article>
             ))}                       
         </div>
 
         <div class="text-center px-4">
             <p class="text-gray-600 mb-6 text-base md:text-lg">Descubre qué servicio se adapta a ti</p>
             
-            <button class="bg-secondary hover:bg-red-700 active:scale-95 
-                           uppercase font-extrabold text-white 
-                           rounded-xl py-4 px-10 
-                           transition-all duration-300 shadow-md hover:shadow-lg
-                           w-full sm:w-auto text-sm md:text-base tracking-wide">
+            <button class="bg-secondary hover:bg-red-700 active:scale-95 uppercase font-extrabold text-white 
+                           rounded-xl w-fit transition-all duration-300 shadow-md hover:shadow-lg
+                           px-5 py-2 md:py-4 md:px-10 md:w-full sm:w-auto text-sm md:text-base tracking-widest">
                 Contratarme Ahora
             </button>
         </div>

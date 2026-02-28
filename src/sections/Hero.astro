@@ -1,24 +1,49 @@
 ---
-import HeroLogo from "@/components/HeroLogo.astro";
-import '@fontsource-variable/inter';
+import HeroLogo from "@/components/logos/HeroLogo.astro";
+import "@fontsource-variable/inter";
 ---
-<section class="flex items-start justify-between min-h-screen px-14 overflow-hidden relative">
-    
-    <div class="flex flex-col  flex-1 max-w-lg mt-32">
-        <h1 class="font-bold text-4xl mb-2">Tu sonido, único.</h1>
-        <h2 class="font-bold text-4xl mb-8">El proceso, simple.</h2>
-        <p class="text-md font-medium mb-6 text-primary">neinstok - Productor e Ingeniero de Mezcla y Mastering</p>
-        <button class="bg-secondary hover:bg-red-700 uppercase font-extrabold text-white rounded-xl py-2 px-12 w-fit">VER PROYECTOS</button>
+
+<section
+  class="relative flex items-start justify-between overflow-hidden px-10 py-20 md:p-36"
+>
+  <div
+    class="relative z-10 flex max-w-lg flex-1 
+        flex-col items-center md:items-start"
+  >
+    <div class="mb-2 space-y-1 text-3xl md:text-4xl text-center md:text-left">
+      <h1 class="font-bold">
+        Tu sonido, único.
+      </h1>
+      <h2 class="font-bold ">
+        El proceso, simple.
+      </h2>
     </div>
 
-    <div class="absolute -top-6 left-72">
-        <HeroLogo class="text-secondary"/>
-    </div>
+    <p
+      class="text-xs font-medium text-primary mb-6 pt-2 text-center"
+    >
+      neinstok - Productor e Ingeniero de Mezcla y Mastering
+    </p>
 
+    <button
+      class="w-fit rounded-xl bg-secondary font-extrabold uppercase
+            text-white transition-all duration-300
+            hover:bg-red-700 hover:shadow-lg active:scale-95
+            text-xs py-2 px-7 md:text-base md:py-1.5 md:px-6"
+      aria-label="Ver proyectos de neinstok"
+    >
+      VER PROYECTOS
+    </button>
+  </div>
+
+  <div class="absolute hidden lg:block 
+    lg:left-2/3 lg:-top-4 lg:-ml-18 xl:left-2/4 xl:-top-2">
+    <HeroLogo class="lg:h-180 lg:w-190 text-secondary" />
+  </div>
 </section>
 
 <style>
-    h4, button {
-        font-family: 'Inter Variable', sans-serif;
-    }
+  button, p {
+    font-family: "Inter Variable", sans-serif;
+  }
 </style>

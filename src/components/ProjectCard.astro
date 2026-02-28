@@ -1,19 +1,24 @@
 ---
-import PlayLogo from './PlayLogo.astro';
-
-// src/components/ProjectCard.astro
 interface Props {
-    title: string;
-    image: string;
-    bgColor: string;
-    large?: boolean;
+  title: string;
+  image: string;
+  audio: string;
+  large?: boolean;
+  subtitle?: string;
+  description?: string;
+  category?: string;
+  bgColor?: string;
 }
 
-const { title, image, bgColor, large = false } = Astro.props;
+const { title, image, audio, large, subtitle, description, category, bgColor } = Astro.props;
+const projectData = { title, subtitle, audio, description, image, category };
 ---
- 
-<div class={large ? "col-span-1 row-span-2" : ""}>
-    <div class={`relative ${large ? 'w-80 h-full' : 'w-80 h-80'} ${bgColor} rounded-3xl overflow-hidden group cursor-pointer flex items-end`}>
+
+<div class={large ? "lg:col-span-1 lg:row-span-1" : ""}>
+    <div 
+        class={`project-card-trigger relative w-80 ${large ? 'h-80 lg:h-full' : 'h-80'} ${bgColor} rounded-3xl overflow-hidden group cursor-pointer flex items-end transition-transform hover:scale-[1.02]`}
+        data-title={title}
+    >
         <img 
             src={image} 
             alt={title} 
@@ -21,12 +26,65 @@ const { title, image, bgColor, large = false } = Astro.props;
             class="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-75 transition duration-500 ease-in-out"
         />
             
-        <div class={`absolute top-5 left-5 z-20 ${large ? 'w-10 h-10' : 'w-10 h-10'} rounded-full`}>
-           <PlayLogo />    
+        <div class="absolute top-5 left-5 z-20 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors duration-300 text-white">
+            <svg class="icon-play w-6 h-6 ml-1 block" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <svg class="icon-pause w-6 h-6 hidden" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
         </div>
         
         <div class="relative z-10 text-white font-bold tracking-wide text-lg pb-6 pl-8">
             {title}
+            {subtitle && <p class="text-xs font-normal opacity-80 mt-1">{subtitle}</p>}
         </div>
     </div>
 </div>
+
+<script>
+  import { projectsData } from '../data/projects'; 
+  import { openPlayer, isPlayerOpen, activeProject, isPlaying } from '../stores/playerStore';
+
+  const cards = document.querySelectorAll('.project-card-trigger');
+  
+  cards.forEach(card => {
+    const el = card as HTMLElement;
+    el.addEventListener('click', () => {
+      const cardTitle = el.dataset.title;
+      const fullProjectData = projectsData.find(p => p.title === cardTitle);
+
+      if (!fullProjectData) return;
+
+      const current = activeProject.get();
+      if (current && current.title === fullProjectData.title && isPlayerOpen.get()) {
+         isPlaying.set(!isPlaying.get());
+      } else {
+         openPlayer(fullProjectData);
+      }
+    });
+  });
+
+  function updateAllCards() {
+    const currentProject = activeProject.get();
+    const isOpen = isPlayerOpen.get();
+    const playing = isPlaying.get();
+
+    cards.forEach(card => {
+        const el = card as HTMLElement;
+        const cardTitle = el.dataset.title;
+        const playIcon = el.querySelector('.icon-play');
+        const pauseIcon = el.querySelector('.icon-pause');
+
+        const isActiveAndPlaying = isOpen && currentProject && currentProject.title === cardTitle && playing;
+
+        if (isActiveAndPlaying) {
+            playIcon?.classList.add('hidden');
+            pauseIcon?.classList.remove('hidden');
+        } else {
+            playIcon?.classList.remove('hidden');
+            pauseIcon?.classList.add('hidden');
+        }
+    });
+  }
+
+  activeProject.subscribe(updateAllCards);
+  isPlayerOpen.subscribe(updateAllCards);
+  isPlaying.subscribe(updateAllCards);
+</script>
