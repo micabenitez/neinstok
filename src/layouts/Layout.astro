@@ -1,7 +1,18 @@
 ---
 import "@/styles/global.css";
-
 import '@fontsource-variable/montserrat/wght.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "neinstok | Mezcla y Mastering Profesional",
+  description = "Productor especializado en mezcla y masterización profesional. Pop, Urbano y Acoustic. Llevo tu música al estándar de la industria con claridad y potencia."
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -9,8 +20,31 @@ import '@fontsource-variable/montserrat/wght.css';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="mezcla profesional, mastering, ingeniero de mezcla, producción musical, mixing engineer, mastering online" />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL("/img/foto-neinstok.webp", Astro.site)} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "neinstok",
+			"jobTitle": "Ingeniero de Mezcla y Mastering",
+			"url": "https://neinstok.vercel.app",
+			"sameAs": [
+			"https://www.instagram.com/neinstok/",
+			"https://open.spotify.com/intl-es/artist/6txpqJ5dBPNz3aioQidxF0",
+			"https://www.youtube.com/@neinstok"
+			]
+		})} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>neinstok</title>
+		<link rel="canonical" href={canonicalURL} />
+		<title>{title}</title>
 	</head>
 	<body>
 		<div>

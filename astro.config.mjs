@@ -10,6 +10,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
+  site: "https://neinstok.vercel.app",
   integrations: [react()]
 });

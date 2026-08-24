@@ -126,7 +126,7 @@ export const ProjectPlayer: React.FC = () => {
 
       <div className={`mobile-player-shell relative z-10 flex flex-col justify-end overflow-hidden text-white md:contents ${
         showInfo
-          ? "h-[calc(100%-4px)] w-[calc(100%-24px)] rounded-[22px] border border-gray-800 bg-[#090909]"
+          ? "h-[calc(100%-3px)]   border border-gray-800 bg-[#090909]"
           : "h-auto w-full border-0 bg-transparent"
       }`}>
         <div className={`relative flex min-h-0 w-full flex-1 flex-col justify-start overflow-y-auto px-4 pt-5 pb-6 transition-all duration-500 ease-in-out md:h-auto md:flex-1 md:justify-center md:overflow-y-auto md:px-20 md:py-0 ${

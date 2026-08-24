@@ -13,7 +13,7 @@ export const projectsData = [
   {
     title: "Pop/R&B",
     song: "Moni Blue – Collide",
-    image: "/img/pop2.jpg",
+    image: "/img/pop4.jpg",
     audio: "/music/Pop1-SinFX.mp3",
     audioAfter: "/music/Pop1-ConFX.mp3",
     category: "MEZCLA & MASTERING",
@@ -23,7 +23,7 @@ export const projectsData = [
 {
     title: "Urbano",
     song: "Triviul feat. The Fiend's 'Widow'",
-    image: "/img/urbano.jpg",
+    image: "/img/urban.jpg",
     audio: "/music/Hphp-SinSfx2.mp3",
     audioAfter: "/music/HphpConSfx1.mp3",
     category: "MEZCLA & MASTERING",
