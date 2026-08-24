@@ -1,22 +1,23 @@
 ---
 import HeroLogo from "@/components/logos/HeroLogo.astro";
+import NeinstokLogo from "@/components/logos/NeinstokLogo.astro";
 
 const linkStyles = "font-semibold hover:text-secondary transition duration-200";
 const buttonStyles = "bg-secondary hover:bg-red-700 text-white font-extrabold uppercase rounded-xl py-2 px-6 transition duration-200 text-sm";
 ---
 
-<header class="sticky top-0 z-50 flex items-center justify-between border-b border-white/20 bg-gray-50/70 px-4 py-3 backdrop-blur-md sm:px-6 md:px-8">
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-white/20 bg-gray-50/70 px-4 py-3 backdrop-blur-md sm:px-6 md:px-14">
     
-    <HeroLogo class="h-8 w-8 text-secondary sm:h-10 sm:w-10" />
+    <NeinstokLogo class="h-14 w-28 mb-3" />
 
-    <nav class="hidden gap-6 text-sm md:flex md:text-base lg:gap-14">
+    <nav class="hidden gap-6 text-sm md:flex md:text-base lg:gap-12 md:ml-8">
         <a href="#about" class={linkStyles}>SOBRE MÍ</a>
         <a href="#services" class={linkStyles}>SERVICIOS</a>
         <a href="#projects" class={linkStyles}>PROYECTOS</a>
     </nav>
 
     <button class={`hidden md:block ${buttonStyles}`}>
-        Contactar
+        <a href="#contact" class="text-white no-underline">Contactar</a>
     </button>
 
     <button 

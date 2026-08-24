@@ -1,49 +1,78 @@
 ---
-import HeroLogo from "@/components/logos/HeroLogo.astro";
-import "@fontsource-variable/inter";
+import Play from "@/components/icons/Play.astro";
+import NeinstokLogo from "@/components/logos/NeinstokLogo.astro";
+import '@fontsource-variable/inter/wght.css';
 ---
 
 <section
-  class="relative flex items-start justify-between overflow-hidden px-10 py-20 md:p-36"
+  class="relative flex min-h-128 flex-col items-center justify-center overflow-hidden bg-slate-50 px-4 py-16 sm:min-h-144 sm:px-6 sm:py-20 lg:min-h-120 lg:px-8"
 >
-  <div
-    class="relative z-10 flex max-w-lg flex-1 
-        flex-col items-center md:items-start"
-  >
-    <div class="mb-2 space-y-1 text-3xl md:text-4xl text-center md:text-left">
-      <h1 class="font-bold">
-        Tu sonido, único.
-      </h1>
-      <h2 class="font-bold ">
-        El proceso, simple.
-      </h2>
+  <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+
+  <div class="relative z-10 flex w-full max-w-4xl flex-col items-center text-center"> 
+    
+    <div class="animate-fade-up mb-4 space-y-2 text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+      <h1 class="text-gray-900">
+          Tu sonido, <span class="italic">único</span>.
+        </h1>
+        <h2 class="text-secondary ">
+          El proceso, <span class="italic">simple</span>.
+        </h2>
+      </div> 
+
+      <p class="animate-fade-up animation-delay-150 mb-8 max-w-2xl px-2 text-base font-medium leading-relaxed text-primary/80 sm:mb-10 sm:text-lg md:text-xl">
+        neinstok - Productor e Ingeniero de Mezcla y Mastering
+      </p>
+
+      <div class="mb-12 flex w-full flex-col items-center gap-6 sm:gap-8 lg:flex-row lg:justify-center">
+        <a href="#projects"
+          aria-label="Ver proyectos y escuchar trabajos realizados"
+          class="group inline-flex min-h-12 w-full max-w-xs shrink-0 items-center justify-center gap-2 rounded-full bg-secondary px-5 py-2 text-sm font-bold text-white shadow-lg shadow-red-600/20 transition-[transform,background-color,box-shadow] duration-200 hover:scale-105 hover:bg-red-700 hover:shadow-red-600/30 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-red-600/30 active:scale-95 sm:w-auto sm:px-8">
+          
+          Ver Proyectos <Play class="h-8 w-8" />
+        </a>
+        
+        <div class="flex max-w-full flex-wrap items-center justify-center gap-3 px-2 py-2 text-center text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 lg:border-l lg:border-zinc-800 lg:pl-8">
+          
+          
+          <span class="hover:text-white transition-colors cursor-default">Pop</span>
+          <span class="text-red-600">/</span>
+          <span class="hover:text-white transition-colors cursor-default">Urban</span>
+          <span class="text-red-600">/</span>
+          <span class="hover:text-white transition-colors cursor-default">Acoustic</span>
+        </div>
+      </div>
     </div>
-
-    <p
-      class="text-xs font-medium text-primary mb-6 pt-2 text-center"
-    >
-      neinstok - Productor e Ingeniero de Mezcla y Mastering
-    </p>
-
-    <button
-      class="w-fit rounded-xl bg-secondary font-extrabold uppercase
-            text-white transition-all duration-300
-            hover:bg-red-700 hover:shadow-lg active:scale-95
-            text-xs py-2 px-7 md:text-base md:py-1.5 md:px-6"
-      aria-label="Ver proyectos de neinstok"
-    >
-      VER PROYECTOS
-    </button>
-  </div>
-
-  <div class="absolute hidden lg:block 
-    lg:left-2/3 lg:-top-4 lg:-ml-18 xl:left-2/4 xl:-top-2">
-    <HeroLogo class="lg:h-180 lg:w-190 text-secondary" />
-  </div>
 </section>
 
 <style>
   button, p {
     font-family: "Inter Variable", sans-serif;
+  }
+
+
+  .animate-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  .animation-delay-150 {
+    animation-delay: 150ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
