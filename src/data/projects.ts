@@ -13,7 +13,7 @@ export const projectsData = [
   {
     title: "Pop/R&B",
     song: "Moni Blue – Collide",
-    image: "/img/pop.jpg",
+    image: "/img/pop2.jpg",
     audio: "/music/Pop1-SinFX.mp3",
     audioAfter: "/music/Pop1-ConFX.mp3",
     category: "MEZCLA & MASTERING",
@@ -32,7 +32,7 @@ export const projectsData = [
 {
     title: "Podcast",
     song: "Podcast (VennStone)",
-    image: "/img/podcast.webp",
+    image: "/img/podcast.jpg",
     audio: "/music/PodcastSinFx1.mp3",
     audioAfter: "/music/PodcastConFx.mp3",
     category: "EDICIÓN & POSTPRODUCCIÓN",

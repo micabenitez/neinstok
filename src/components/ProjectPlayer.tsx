@@ -159,12 +159,12 @@ export const ProjectPlayer: React.FC = () => {
                 <button
                   onClick={() => setIsAfter(false)}
                   className={`flex-1 rounded px-4 py-1 text-[10px] font-bold transition-all md:flex-none md:text-xs ${!isAfter ? "bg-gray-800 text-white" : "text-gray-400 hover:text-white"}`}
-                >PROCESADO</button>
+                >ORIGINAL</button>
                 <div className="w-px h-4 bg-gray-700 mx-1"></div>
                 <button
                   onClick={() => setIsAfter(true)}
                   className={`flex-1 rounded px-4 py-1 text-[10px] font-bold transition-all md:flex-none md:text-xs ${isAfter ? "bg-red-600 text-white" : "text-gray-400 hover:text-white"}`}
-                >ORIGINAL</button>
+                >PROCESADO</button>
               </div>
               
               <p className="mt-2 max-w-xl text-sm text-center italic text-gray-600 md:ml-auto md:text-md">
