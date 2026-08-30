@@ -1,5 +1,4 @@
 ---
-import HeroLogo from "@/components/logos/HeroLogo.astro";
 import NeinstokLogo from "@/components/logos/NeinstokLogo.astro";
 
 const linkStyles = "font-semibold hover:text-secondary transition duration-200";
@@ -18,10 +17,8 @@ const buttonStyles = "cursor-pointer bg-secondary hover:bg-red-700 text-white fo
         <a href="#projects" class={linkStyles}>PROYECTOS</a>
     </nav>
 
-    <a href="#contact">
-        <button class={`hidden md:block ${buttonStyles}`}>
-            Contactar
-        </button>
+    <a href="#contact" class={`hidden md:block ${buttonStyles}`}>
+        Contactar     
     </a>
 
     <button 
@@ -37,14 +34,12 @@ const buttonStyles = "cursor-pointer bg-secondary hover:bg-red-700 text-white fo
 
     <nav 
         id="mobile-menu" 
-        class="absolute left-0 right-0 top-full hidden flex-col gap-4 border-b border-white/20 bg-gray-50/95 p-4 backdrop-blur-md md:hidden"
+        class="absolute left-0 right-0 top-full hidden text-center flex-col gap-4 border-b border-white/20 bg-gray-50/95 p-4 backdrop-blur-md md:hidden"
     >
         <a href="#about" class={`${linkStyles} text-lg py-2`}>SOBRE MÍ</a>
         <a href="#services" class={`${linkStyles} text-lg py-2`}>SERVICIOS</a>
         <a href="#projects" class={`${linkStyles} text-lg py-2`}>PROYECTOS</a>
-        <button class={`${buttonStyles} w-full mt-2`}>
-            <a href="#contact" class="text-white no-underline">Contactar</a>
-        </button>
+        <a href="#contact" class={`${linkStyles} text-lg py-2`}>CONTACTO</a>
     </nav>
 
 </header>

@@ -27,8 +27,8 @@ const services = [
 
 <section class="p-8 md:py-16 w-full sm:px-6 lg:px-12 mb-8 bg-white" id="services">
     <div class="max-w-6xl mx-auto">
-        <div class="md:mb-16">
-            <h2 class="text-sm md:text-base font-bold mb-4 text-left opacity-70">
+        <div class="md:mb-5">
+            <h2 class="text-sm md:text-base font-bold mb-6 text-left opacity-70">
                 _SERVICIOS
             </h2>
             <h3 class="text-lg md:text-3xl lg:text-4xl font-bold text-center leading-tight">
@@ -36,7 +36,7 @@ const services = [
             </h3>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 md:mb-16 p-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 md:mb-6 p-8">
             {services.map(({ title, Icon, color, description }) => (
                 <article class="group relative flex flex-col items-start justify-between bg-gray-100 rounded-3xl 
                 p-6 md:p-8 min-h-72 w-full transition-all duration-300 ease-out
@@ -64,12 +64,10 @@ const services = [
         <div class="text-center px-4">
             <p class="text-gray-600 mb-6 text-base md:text-lg">Descubre qué servicio se adapta a ti</p>
             
-            <a href="#contact" class="text-white hover:text-gray-300 ">
-                <button class="bg-secondary hover:bg-red-700 active:scale-95 uppercase font-extrabold text-white 
-                            rounded-xl min-h-12 w-full max-w-xs transition-all duration-300 shadow-md hover:shadow-lg
-                            px-5 py-2 md:py-4 md:px-10 md:w-full sm:w-auto text-sm md:text-base tracking-widest cursor-pointer">
-                    Contratarme Ahora
-                </button>
+            <a href="#contact" 
+               class="inline-flex items-center justify-center bg-secondary hover:bg-red-700 active:scale-95 uppercase font-extrabold text-white rounded-xl min-h-12 w-full sm:w-auto md:w-full max-w-xs transition-all duration-300 shadow-md hover:shadow-lg px-5 py-2 md:py-4 md:px-10 text-sm md:text-base tracking-widest cursor-pointer text-center"
+            >
+                Contratarme Ahora
             </a>
         </div>
     </div>
